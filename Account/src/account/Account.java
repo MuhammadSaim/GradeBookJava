@@ -5,6 +5,8 @@
  */
 package account;
 
+import java.util.Scanner;
+
 /**
  *
  * @author muhammadsaim
@@ -17,10 +19,14 @@ public class Account {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Accounts user = new Accounts(-45.0);
+        double ammount;
         
-        user.deposit(500);
-        double ammount = user.getBalance();
+        Accounts user = new Accounts(100.0);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter Ammount to Deposit: ");
+        ammount = scanner.nextDouble();
+        user.deposit(ammount);
+        ammount = user.getBalance();
         System.out.println("Your Total Balance is "+ammount);
         
     }
